@@ -1,0 +1,269 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout 
+        android:orientation="horizontal"
+		android:id="@+id/linear_layout_result_id"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        
+        <ImageView 
+            android:adjustViewBounds="true"
+            android:maxWidth="20dp"
+            android:maxHeight="20dp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/success"
+	        android:layout_marginLeft="2dp"
+	        android:layout_marginTop="4dp"
+			android:contentDescription="@string/content_description"
+			android:background="@drawable/imageview_background"
+            />
+        
+	    <TextView 
+	        android:id="@+id/text_view_result_id"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginTop="2dp"
+	        android:text="@string/text_view_authenticate_success"/>
+        
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:textSize="16sp"
+	    	android:layout_marginLeft="5dp"
+	        android:layout_marginTop="2dp"
+	        android:text="@string/text_view_authenticate_uid"
+	        />
+	    <TextView 
+			android:id="@+id/text_view_authenticate_uid_id"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:layout_marginLeft="2dp"
+	        android:layout_marginTop="2dp"
+	        />
+	    
+    </LinearLayout>
+	
+	<ImageView 
+	    android:id="@+id/divider_view_result_id"
+	    android:layout_below="@id/linear_layout_result_id"
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:layout_marginTop="2dp"
+	    android:background="#14626C"
+	    android:contentDescription="@string/content_description"
+	    />
+    
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:id="@+id/linear_layout_image_id"
+        android:layout_below="@id/divider_view_result_id"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        
+        <ImageView 
+            android:id="@+id/image_view_product_id"
+            android:adjustViewBounds="true"
+            android:maxWidth="160dp"
+            android:maxHeight="170dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/welcome"
+            android:contentDescription="@string/content_description"
+            android:background="@drawable/imageview_background"
+            />
+        
+    </LinearLayout>
+    
+	<TableLayout 
+	    android:id="@+id/table_layout_detail_id"
+	    android:layout_below="@id/divider_view_result_id"
+	    android:layout_alignLeft="@id/divider_view_result_id"
+	    android:layout_toLeftOf="@id/linear_layout_image_id"
+	    android:layout_alignTop="@id/linear_layout_image_id"
+	    android:layout_alignBottom="@id/linear_layout_image_id"
+	    android:background="@drawable/imageview_background"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/text_view_name"/>
+            <TextView android:id="@+id/text_view_name_id" 
+                android:textSize="16sp"
+                android:layout_width="160dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+ 
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/text_view_type"/>
+            <TextView android:id="@+id/text_view_type_id" 
+                android:textSize="16sp"
+                android:layout_width="160dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+ 
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/text_view_tax"/>
+            <TextView android:id="@+id/text_view_tax_id" 
+                android:textSize="16sp"
+                android:layout_width="160dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/text_view_address"/>
+            <TextView android:id="@+id/text_view_address_id" 
+                android:textSize="16sp"
+                android:layout_width="160dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/text_view_phone"/>
+            <TextView android:id="@+id/text_view_phone_id" 
+                android:textSize="16sp"
+                android:layout_width="160dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/text_view_producer"/>
+            <TextView android:id="@+id/text_view_producer_id" 
+                android:textSize="16sp"
+                android:layout_width="160dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+   	</TableLayout>   
+	
+	<ImageView 
+	    android:id="@+id/divider_view_table_layout_id"
+	    android:layout_below="@id/linear_layout_image_id"
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:layout_marginTop="2dp"
+	    android:background="#14626C"
+	    android:contentDescription="@string/content_description"
+	    />
+	
+    <Button
+        android:id="@+id/button_query_id"
+        android:layout_below="@id/divider_view_table_layout_id"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="2dp"
+        android:background="@drawable/button_background"
+        android:text="@string/button_text_query" />
+	
+	<ImageView 
+	    android:id="@+id/divider_view_button_id"
+	    android:layout_below="@id/button_query_id"
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:layout_marginTop="2dp"
+	    android:background="#14626C"
+	    android:contentDescription="@string/content_description"
+	    />
+	
+	<TableLayout 
+	    android:layout_below="@id/divider_view_button_id"
+	    android:layout_alignLeft="@id/divider_view_button_id"
+	    android:background="@drawable/imageview_background"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+	    
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/text_view_authenticate_number"/>
+            <TextView android:id="@+id/text_view_authenticate_number_id" 
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+	    
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/text_view_authenticate_time"/>
+            <TextView android:id="@+id/text_view_authenticate_time_id" 
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+        	    
+	</TableLayout>	
+    
+</RelativeLayout>

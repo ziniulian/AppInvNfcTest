@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.invengo.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/invengo_logo"
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarTheme" >
+        <activity
+            android:name="com.invengo.activity.InvengoNFCMainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 
+        <activity
+            android:name="com.invengo.activity.InvengoNFCMainActivity"
+            android:label="@string/system_title"
+            android:screenOrientation="portrait" >
+        </activity>
+         -->
+        <activity
+            android:name="com.invengo.activity.AuthenticateSuccessActivity"
+            android:label="@string/title_activity_authenticate"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.invengo.activity.AuthenticateFailureActivity"
+            android:label="@string/title_activity_authenticate"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.invengo.activity.TracingSuccessActivity"
+            android:label="@string/title_activity_tracing"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.invengo.activity.TracingFailureActivity"
+            android:label="@string/title_activity_tracing"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.invengo.activity.VersionShowActivity"
+            android:label="@string/title_activity_version_show"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.invengo.activity.CommonNFCActivity"
+            android:label="@string/title_activity_common_nfc"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.invengo.activity.DohiaResultActivity"
+            android:label="@string/title_activity_common_nfc"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,258 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TracingSuccessActivity" >
+    
+    <LinearLayout 
+        android:orientation="horizontal"
+		android:id="@+id/tracing_linear_layout_result_id"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        
+        <ImageView 
+            android:adjustViewBounds="true"
+            android:maxWidth="20dp"
+            android:maxHeight="20dp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/success"
+	        android:layout_marginLeft="2dp"
+	        android:layout_marginTop="4dp"
+			android:contentDescription="@string/content_description"
+			android:background="@drawable/imageview_background"
+            />
+        
+	    <TextView 
+	        android:id="@+id/tracing_text_view_result_id"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginTop="2dp"
+	        android:text="@string/tracing_text_view_authenticate_success"/>
+        
+    </LinearLayout>
+    
+   	<ImageView 
+	    android:id="@+id/tracing_divider_view_result_id"
+	    android:layout_below="@id/tracing_linear_layout_result_id"
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:layout_marginTop="2dp"
+	    android:background="#14626C"
+	    android:contentDescription="@string/content_description"
+	    />
+    
+    <TableLayout 
+	    android:id="@+id/tracing_table_layout_detail_id"
+	    android:background="@drawable/imageview_background"
+	    android:layout_below="@id/tracing_divider_view_result_id"
+	    android:layout_alignLeft="@id/tracing_divider_view_result_id"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/text_view_name"/>
+            <TextView android:id="@+id/tracing_text_view_name_id" 
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+ 
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/text_view_address"/>
+            <TextView android:id="@+id/tracing_text_view_address_id" 
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+ 
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/tracing_text_view_person_in_charge"/>
+            <TextView android:id="@+id/tracing_text_view_person_in_charge_id" 
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/tracing_text_view_person_phone"/>
+            <TextView android:id="@+id/tracing_text_view_person_phone_id" 
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+        
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/tracing_text_view_producer_date"/>
+            <TextView android:id="@+id/tracing_text_view_producer_date_id" 
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/tracing_text_view_in_date"/>
+            <TextView android:id="@+id/tracing_text_view_in_date_id" 
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+   	</TableLayout>   
+   	
+    <ImageView 
+	    android:id="@+id/tracing_divider_view_table_layout_id"
+	    android:layout_below="@id/tracing_table_layout_detail_id"
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:layout_marginTop="2dp"
+	    android:background="#14626C"
+	    android:contentDescription="@string/content_description"
+	    />
+    
+    <TableLayout 
+	    android:background="@drawable/imageview_background"
+	    android:id="@+id/tracing_table_layout_out_detail_id"
+	    android:layout_below="@id/tracing_divider_view_table_layout_id"
+	    android:layout_alignLeft="@id/tracing_divider_view_table_layout_id"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/text_view_name"/>
+            <TextView android:id="@+id/tracing_out_text_view_name_id" 
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+ 
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/tracing_text_view_seller"/>
+            <TextView android:id="@+id/tracing_text_view_seller_id" 
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/tracing_text_view_seller_phone"/>
+            <TextView android:id="@+id/tracing_text_view_seller_phone_id" 
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+        
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/tracing_text_view_sale_place"/>
+            <TextView android:id="@+id/tracing_text_view_sale_place_id" 
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+ 
+        <TableRow >
+            <TextView android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/tracing_text_view_sale_date"/>
+            <TextView android:id="@+id/tracing_text_view_sale_date_id" 
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+   	</TableLayout>   
+   	
+    <ImageView 
+	    android:id="@+id/tracing_divider_view_button_id"
+	    android:layout_below="@id/tracing_table_layout_out_detail_id"
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:layout_marginTop="2dp"
+	    android:background="#14626C"
+	    android:contentDescription="@string/content_description"
+	    />
+    
+    <Button
+        android:id="@+id/button_back_id"
+        android:layout_below="@id/tracing_divider_view_button_id"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="2dp"
+        android:background="@drawable/button_background"
+        android:text="@string/button_text_back" />
+    
+</RelativeLayout>
